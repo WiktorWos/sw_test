@@ -12,9 +12,9 @@ def functions(message):
     if f == 1:
         what = int(message[1])
         if what == 1:
-            cmd = "amixer -D pulse sset 10%-"
+            cmd = "amixer -D pulse sset Master 10%-"
         else:
-            cmd = "amixer -D pulse sset 10%+"
+            cmd = "amixer -D pulse sset Master 10%+"
         subprocess.call(cmd, shell=True)
         return ""
     if f == 2:
